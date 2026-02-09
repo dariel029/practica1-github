@@ -1,0 +1,21 @@
+name: Notificación CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Ejecutar Hola Mundo
+        run: node hola.js
+
+      - name: Enviar notificación a ntfy
+        run: |
+          curl -d "Se hizo un push a la rama main en el repositorio practica-github" \
+          ntfy.sh/devops-itla
