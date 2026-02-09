@@ -19,3 +19,4 @@ jobs:
         run: |
           curl -d "Se hizo un push a la rama main en el repositorio practica1-github" \
           ntfy.sh/devops-itla
+
